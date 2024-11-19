@@ -7,6 +7,10 @@ def download_datasets():
         "iamsouravbanerjee/life-expectancy-at-birth-across-the-globe"
     ]
     
+    paths = []
     for dataset in datasets:
         path = kagglehub.dataset_download(dataset)
+        paths.append(path)
         print("Path to dataset files:", path)
+
+    return paths
